@@ -17,20 +17,21 @@ function verifyNumber(){
 
     if( bet > 10 || bet < 1){
 
-    alert('Número inválido')
+        resultado.innerHTML= `<h1>Número inválido</h1>`
 
     }
-    if( numberTofind < bet){
+    else if( numberTofind < bet){
         attemps++;
-        alert('O Número Procurado é Menor')
+
+        resultado.innerHTML= `<h1>O Número Procurado é Menor</h1>`
         
     }
     else if(numberTofind > bet){
         attemps++;
-        alert('O Número Procurado é Maior')
+        resultado.innerHTML= `<h1>O Número Procurado é Maior</h1>`
     }
     else{
-        alert('Parabéns Você acertou o Número, com ' +attemps+ ' Tentativas')
+        resultado.innerHTML= `<h1>Parabéns Você acertou o Número, com  ${attemps}  Tentativas'</h1>`
     }
 
 }
